@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<div class='text-center'>
+<h2>Register</h2>
+</div>
+{% comment %} form section {% endcomment %}
+<div class='col-md-4 offset-md-4'>
+<form method='POST'>
+{% csrf_token %}
+  <div class="form-group">   
+    <input type="text" class="form-control" placeholder='Enter Username' name='username'>  
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" placeholder = 'Enter Password' name='password'>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" placeholder = 'Conform Password' name='password1'>
+  </div>
+  <center>
+   <button type="submit" class="btn btn-secondary">Login</button></center>
+</form>
+</div>
+{% comment %} / form  section {% endcomment %}
+{% endblock content %}
